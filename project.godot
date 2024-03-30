@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Guillotines"
-run/main_scene="res://experimental_level.tscn"
+run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=720
-window/size/viewport_height=480
+window/size/viewport_width=400
+window/size/viewport_height=400
 
 [dotnet]
 

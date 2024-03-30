@@ -20,6 +20,8 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
+	if (Input.is_anything_pressed()==false):
+		$AnimatedSprite2D.animation = "idle"
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
@@ -35,9 +37,7 @@ func _process(delta):
 		$AnimatedSprite2D.flip_v = false
 		# See the note below about boolean assignment.
 		$AnimatedSprite2D.flip_h = velocity.x < 0
-	elif velocity.y != 0:
-		$AnimatedSprite2D.animation = "up"
-		$AnimatedSprite2D.flip_v = velocity.y > 0
+
 
 # Methode appelee au demarrage/reset de la partie
 func start(pos):
